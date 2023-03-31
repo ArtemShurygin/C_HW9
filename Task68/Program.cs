@@ -10,7 +10,10 @@ Console.WriteLine("Введите число m:");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число n:");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Функция Аккермана A({m},{n}): {Akkerman(m,n)}");
+if (m >= 0 & n >= 0)
+    Console.WriteLine($"Функция Аккермана A({m},{n}): {Akkerman(m,n)}");
+else
+    Console.WriteLine("Нарушено условие: m >= 0, n >= 0");
 
 int Akkerman(int m, int n)
 {
