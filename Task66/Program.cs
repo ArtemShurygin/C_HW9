@@ -8,10 +8,12 @@ M = 4; N = 8. -> 30
 
 Console.WriteLine("Введите число M:");
 int M = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число N:");
+Console.WriteLine("Введите число N (N >= M):");
 int N = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Сумма чисел в промежутке от M до N: {SumMtoN(M,N)}");
-
+if (N >= M)
+    Console.WriteLine($"Сумма чисел в промежутке [{M},{N}]: {SumMtoN(M,N)}");
+if (N < M)
+    Console.WriteLine($"Нарушено условие: M >= N");
 int SumMtoN(int M, int N)
 {
     if (M==N) return M;
