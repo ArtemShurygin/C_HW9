@@ -7,10 +7,13 @@ N = 5 -> "5, 4, 3, 2, 1"
 N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 */
 
-Console.WriteLine("Введите число N:");
-int N = Convert.ToInt32(Console.ReadLine());
 int i=0;
-Console.WriteLine($"Натуральные числа в промежутке от [{N},1]:{NNum(N,i)}");
+Console.WriteLine("Введите число N (N >= 1):");
+int N = Convert.ToInt32(Console.ReadLine());
+if (N >= 1)
+    Console.WriteLine($"Натуральные числа в промежутке от [{N},1]:{NNum(N,i)}");
+else
+    Console.WriteLine("Заданное число N должно быть больше 1");
 
 string NNum(int N, int i)
 {
